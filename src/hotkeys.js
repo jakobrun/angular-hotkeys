@@ -399,7 +399,7 @@
             // there will be no event, so just execute the callback.
             if (event) {
               var target = event.target || event.srcElement; // srcElement is IE only
-              var nodeName = target.nodeName.toUpperCase();
+              var nodeName = event.path[0].nodeName.toUpperCase();
 
               // check if the input has a mousetrap class, and skip checking preventIn if so
               if ((' ' + target.className + ' ').indexOf(' mousetrap ') > -1) {
